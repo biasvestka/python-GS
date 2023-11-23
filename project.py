@@ -196,9 +196,9 @@ class ClienteInfoApp(App):
                 data = json.load(json_file)
 
             for cliente in data:
-                if cliente["numero_serie"] == cliente_serial:
+                if cliente["nome"] == cliente_serial:  # Correção aqui, trocando 'numero_serie' por 'nome'
                     data.remove(cliente)
-                    print(f"Cliente {cliente_serial} removida do JSON.")
+                    print(f"Cliente {cliente_serial} removido do JSON.")
                     break
 
             with open("clientes.json", "w") as json_file:
@@ -208,6 +208,6 @@ class ClienteInfoApp(App):
 
         remove_cliente_from_oracle(cliente_serial)
 
+
 if __name__ == "__main__":
     ClienteInfoApp().run()
-#teste
