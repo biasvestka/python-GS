@@ -210,3 +210,4 @@ class ClienteInfoApp(App):
 
 if __name__ == "__main__":
     ClienteInfoApp().run()
+#teste
